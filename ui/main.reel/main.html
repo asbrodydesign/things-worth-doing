@@ -35,6 +35,10 @@
                 {
                     "type": "action",
                     "listener": {"@": "actionEventListener"}
+                },
+                {
+                    "type": "action",
+                    "listener": {"@": "object"}
                 }
             ]
         },
@@ -43,6 +47,16 @@
             "properties": {
                 "element": {"#": "list"},
                 "identifier": "montage/core/range-controller"
+            }
+        },
+        "object": {
+            "prototype": "montage/core/event/action-event-listener",
+            "properties": {
+                "action": "addContent",
+                "handler": {"@": "list1"}
+            },
+            "_dev": {
+                "isHidden": true
             }
         },
         "title1": {
