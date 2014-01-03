@@ -14,49 +14,23 @@
                 "element": {"#": "main"}
             }
         },
-        "actionEventListener": {
-            "prototype": "montage/core/event/action-event-listener",
-            "properties": {
-                "action": "addContent",
-                "handler": {"@": "list1"}
-            },
-            "_dev": {
-                "isHidden": true
-            }
-        },
         "button1": {
             "prototype": "digit/ui/button.reel",
             "properties": {
                 "element": {"#": "button"},
                 "enabled": true,
                 "label": "New Thing"
-            },
-            "listeners": [
-                {
-                    "type": "action",
-                    "listener": {"@": "actionEventListener"}
-                },
-                {
-                    "type": "action",
-                    "listener": {"@": "object"}
-                }
-            ]
+            }
         },
         "list1": {
             "prototype": "digit/ui/list.reel",
             "properties": {
                 "element": {"#": "list"},
+                "content": [
+                    ""
+                ],
+                "contentController": null,
                 "identifier": "montage/core/range-controller"
-            }
-        },
-        "object": {
-            "prototype": "montage/core/event/action-event-listener",
-            "properties": {
-                "action": "addContent",
-                "handler": {"@": "list1"}
-            },
-            "_dev": {
-                "isHidden": true
             }
         },
         "title1": {
